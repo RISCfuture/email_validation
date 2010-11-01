@@ -1,0 +1,39 @@
+h1. email_validation -- Simple email validator for Rails 3
+
+| *Author* | Tim Morgan |
+| *Version* | 1.0 (Oct 30, 2010) |
+| *License* | Released under the MIT license. |
+
+h2. About
+
+This gem adds a very simple email address format validator to be used with ActiveRecord models in Rails 3.0. It supports localized error messages.
+
+h2. Installation
+
+Add the gem to your project's @Gemfile@:
+
+<pre><code>
+gem 'email_validation'
+</code></pre>
+
+h2. Usage
+
+This gem is an @EachValidator@, and thus is used with the @validates@ method:
+
+<pre><code>
+class User < ActiveRecord::Base
+  validates :email_address,
+            presence: true,
+			email: true
+end
+</code></pre>
+
+The localization key is @invalid_email@, and can be specified in the localized YAML file like so:
+
+<pre><code>
+en:
+  activerecord:
+	errors:
+	  messages:
+	    invalid_email: Email address is invalid.
+</code></pre>
