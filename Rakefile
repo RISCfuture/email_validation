@@ -1,13 +1,15 @@
-require 'rake'
+require 'rubygems'
+require 'bundler'
 begin
-  require 'bundler'
-rescue LoadError
-  puts "Bundler is not installed; install with `gem install bundler`."
-  exit 1
+  Bundler.setup(:default, :development)
+rescue Bundler::BundlerError => e
+  $stderr.puts e.message
+  $stderr.puts "Run `bundle install` to install missing gems"
+  exit e.status_code
 end
+require 'rake'
 
-Bundler.require :default
-
+require 'jeweler'
 Jeweler::Tasks.new do |gem|
   gem.name = "email_validation"
   gem.summary = %Q{Simple email validation in Rails 3}
@@ -15,10 +17,10 @@ Jeweler::Tasks.new do |gem|
   gem.email = "git@timothymorgan.info"
   gem.homepage = "http://github.com/riscfuture/email_validation"
   gem.authors = [ "Tim Morgan" ]
-  gem.add_dependency 'localized_each_validator', '>= 1.0.1'
 end
-Jeweler::GemcutterTasks.new
+Jeweler::RubygemsDotOrgTasks.new
 
+require 'yard'
 YARD::Rake::YardocTask.new('doc') do |doc|
   doc.options << "-m" << "textile"
   doc.options << "--protected"
