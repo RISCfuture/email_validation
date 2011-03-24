@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{email_validation}
-  s.version = "1.0.0"
+  s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tim Morgan"]
-  s.date = %q{2010-11-17}
+  s.date = %q{2011-03-23}
   s.description = %q{A simple, localizable EachValidator for email address fields in ActiveRecord 3.0.}
   s.email = %q{git@timothymorgan.info}
   s.extra_rdoc_files = [
@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".document",
+    ".rspec",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE",
@@ -25,15 +26,20 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "email_validation.gemspec",
-    "lib/email_validation.rb"
+    "lib/email_validation.rb",
+    "spec/email_validator_spec.rb",
+    "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/riscfuture/email_validation}
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{Simple email validation in Rails 3}
+  s.test_files = [
+    "spec/email_validator_spec.rb",
+    "spec/spec_helper.rb"
+  ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
@@ -41,17 +47,20 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<yard>, [">= 0"])
       s.add_development_dependency(%q<RedCloth>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
     else
       s.add_dependency(%q<localized_each_validator>, [">= 1.0.1"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<yard>, [">= 0"])
       s.add_dependency(%q<RedCloth>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
     end
   else
     s.add_dependency(%q<localized_each_validator>, [">= 1.0.1"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<yard>, [">= 0"])
     s.add_dependency(%q<RedCloth>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
   end
 end
 
