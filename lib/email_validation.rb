@@ -11,10 +11,13 @@ require 'localized_each_validator'
 # | @:allow_nil@ | If true, @nil@ values are allowed. |
 
 class EmailValidator < LocalizedEachValidator
+  # Regular expression describing valid emails
+  EMAIL_REGEX = "[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}"
+  
   error_key :invalid_email
 
   # @private
   def valid?(_, _, value)
-    value =~ /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+    value =~ /^#{EMAIL_REGEX}$/i || value =~ /^.+\s+<#{EMAIL_REGEX}>$/i
   end
 end

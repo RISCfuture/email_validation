@@ -30,3 +30,8 @@ YARD::Rake::YardocTask.new('doc') do |doc|
   
   doc.files = [ 'lib/*_validator.rb', 'README.textile' ]
 end
+
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new
+
+task(default: :spec)
