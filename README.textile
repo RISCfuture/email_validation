@@ -1,7 +1,7 @@
 h1. email_validation -- Simple email validator for Rails 3
 
 | *Author* | Tim Morgan |
-| *Version* | 1.1 (Mar 23, 2011) |
+| *Version* | 1.1.1 (Jul 19, 2011) |
 | *License* | Released under the MIT license. |
 
 h2. About
