@@ -12,7 +12,7 @@ require 'localized_each_validator'
 
 class EmailValidator < LocalizedEachValidator
   # Regular expression describing valid emails
-  EMAIL_REGEX = "[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}"
+  EMAIL_REGEX = "[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}"
   
   error_key :invalid_email
 
