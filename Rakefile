@@ -17,6 +17,7 @@ Jeweler::Tasks.new do |gem|
   gem.email = "git@timothymorgan.info"
   gem.homepage = "http://github.com/riscfuture/email_validation"
   gem.authors = [ "Tim Morgan" ]
+  gem.files = %w( lib/**/* README.textile email_validation.gemspec LICENSE )
 end
 Jeweler::RubygemsDotOrgTasks.new
 
@@ -26,9 +27,9 @@ YARD::Rake::YardocTask.new('doc') do |doc|
   doc.options << "--protected"
   doc.options << "-r" << "README.textile"
   doc.options << "-o" << "doc"
-  doc.options << "--title" << "email_validation Documentation".inspect
+  doc.options << "--title" << "email_validation Documentation"
   
-  doc.files = [ 'lib/*_validator.rb', 'README.textile' ]
+  doc.files = %w( lib/**/* README.textile )
 end
 
 require 'rspec/core/rake_task'
