@@ -4,36 +4,28 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{email_validation}
+  s.name = "email_validation"
   s.version = "1.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tim Morgan"]
-  s.date = %q{2011-07-19}
-  s.description = %q{A simple, localizable EachValidator for email address fields in ActiveRecord 3.0.}
-  s.email = %q{git@timothymorgan.info}
+  s.date = "2013-02-24"
+  s.description = "A simple, localizable EachValidator for email address fields in ActiveRecord 3.0."
+  s.email = "git@timothymorgan.info"
   s.extra_rdoc_files = [
     "LICENSE",
     "README.textile"
   ]
   s.files = [
-    ".document",
-    ".rspec",
-    "Gemfile",
-    "Gemfile.lock",
     "LICENSE",
     "README.textile",
-    "Rakefile",
-    "VERSION",
     "email_validation.gemspec",
-    "lib/email_validation.rb",
-    "spec/email_validator_spec.rb",
-    "spec/spec_helper.rb"
+    "lib/email_validation.rb"
   ]
-  s.homepage = %q{http://github.com/riscfuture/email_validation}
+  s.homepage = "http://github.com/riscfuture/email_validation"
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
-  s.summary = %q{Simple email validation in Rails 3}
+  s.rubygems_version = "1.8.25"
+  s.summary = "Simple email validation in Rails 3"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
