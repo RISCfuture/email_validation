@@ -1,19 +1,22 @@
 require 'localized_each_validator'
 
-# Validates email addresses. Uses the @invalid_email@ error message key.
+# Validates email addresses. Uses the `invalid_email` error message key.
 #
 # @example
 #   validates :email_address, email: true
 #
-# h2. Options
+# Options
+# -------
 #
-# | @:message@ | A custom message to use if the email is invalid. |
-# | @:allow_nil@ | If true, @nil@ values are allowed. |
+# |              |                                                  |
+# |:-------------|:-------------------------------------------------|
+# | `:message`   | A custom message to use if the email is invalid. |
+# | `:allow_nil` | If true, `nil` values are allowed.               |
 
 class EmailValidator < LocalizedEachValidator
-  # Regular expression describing valid emails
+  # Regular expression describing valid emails.
   EMAIL_REGEX = "[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}"
-  
+
   error_key :invalid_email
 
   # @private
