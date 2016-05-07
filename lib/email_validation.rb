@@ -29,6 +29,6 @@ class EmailValidator < LocalizedEachValidator
               when :rfc_5322_simple then RFC5322_SIMPLE_REGEX
               else BASIC_REGEX
             end
-    value =~ /\A#{regex}\z/i || value =~ /\A.+\s+<#{regex}>\z/i
+    (value =~ /\A#{regex}\z/i || value =~ /\A.+\s+<#{regex}>\z/i) != nil
   end
 end
