@@ -9,22 +9,14 @@ Gem::Specification.new do |s|
   s.name = "email_validation".freeze
   s.version = "1.2.1"
 
+  s.required_ruby_version = '>= 2.5'
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
   s.authors = ["Tim Morgan".freeze]
-  s.date = "2016-05-07"
   s.description = "A simple, localizable EachValidator for email address fields in ActiveRecord 3.0.".freeze
   s.email = "git@timothymorgan.info".freeze
-  s.extra_rdoc_files = [
-      "LICENSE",
-      "README.md"
-  ]
-  s.files = [
-      "LICENSE",
-      "README.md",
-      "email_validation.gemspec",
-      "lib/email_validation.rb"
-  ]
+  s.extra_rdoc_files = %w[LICENSE README.md]
+  s.files = %w[LICENSE README.md email_validation.gemspec lib/email_validation.rb]
   s.homepage = "http://github.com/riscfuture/email_validation".freeze
   s.rubygems_version = "2.6.3".freeze
   s.summary = "Simple email validation in Rails 3".freeze
