@@ -9,8 +9,8 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
+require 'juwelier'
+Juwelier::Tasks.new do |gem|
   gem.name        = "email_validation"
   gem.summary     = %Q{Simple email validation in Rails 3}
   gem.description = %Q{A simple, localizable EachValidator for email address fields in ActiveRecord 3.0.}
@@ -19,7 +19,7 @@ Jeweler::Tasks.new do |gem|
   gem.authors     = ["Tim Morgan"]
   gem.files       = %w( lib/**/* README.md email_validation.gemspec LICENSE )
 end
-Jeweler::RubygemsDotOrgTasks.new
+Juwelier::RubygemsDotOrgTasks.new
 
 require 'yard'
 
