@@ -15,7 +15,7 @@ RSpec.describe EmailValidator do
   end
 
   it "should use a full RFC 5322 syntax when configured" do
-    @validator = described_class.new(attributes: %i[foo bar], format: :rfc_5322)
+    @validator = described_class.new(attributes: %i[foo bar], format: :rfc5322)
     expect(@validator.valid?(nil, nil, "siobhan.o'malley@ex.ample.org")).to be(true)
   end
 
