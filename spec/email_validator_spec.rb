@@ -7,6 +7,7 @@ RSpec.describe EmailValidator do
 
   it "should validate an email address" do
     expect(@validator.valid?(nil, nil, 'foo@bar.com')).to eql(true)
+    expect(@validator.valid?(nil, nil, 'foo@bar.blackfriday')).to eql(true)
   end
 
   it "should validate a name and email pair" do
