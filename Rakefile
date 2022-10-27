@@ -1,5 +1,7 @@
-require 'rubygems'
-require 'bundler'
+# frozen_string_literal: true
+
+require "rubygems"
+require "bundler"
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -7,21 +9,21 @@ rescue Bundler::BundlerError => e
   warn "Run `bundle install` to install missing gems"
   exit e.status_code
 end
-require 'rake'
+require "rake"
 
-require 'juwelier'
+require "juwelier"
 Juwelier::Tasks.new do |gem|
   gem.name        = "email_validation"
   gem.summary     = %(Simple email validation in Rails 3)
   gem.description = %(A simple, localizable EachValidator for email address fields in ActiveRecord 3.0.)
-  gem.email       = 'git@timothymorgan.info'
-  gem.homepage    = 'http://github.com/riscfuture/email_validation'
+  gem.email       = "git@timothymorgan.info"
+  gem.homepage    = "http://github.com/riscfuture/email_validation"
   gem.authors     = ["Tim Morgan"]
   gem.files       = %w[lib/**/* README.md email_validation.gemspec LICENSE]
 end
 Juwelier::RubygemsDotOrgTasks.new
 
-require 'yard'
+require "yard"
 
 # bring sexy back (sexy == tables)
 module YARD::Templates::Helpers::HtmlHelper
@@ -30,18 +32,18 @@ module YARD::Templates::Helpers::HtmlHelper
   end
 end
 
-YARD::Rake::YardocTask.new('doc') do |doc|
-  doc.options << '-m' << 'markdown'
-  doc.options << '-M' << 'redcarpet'
-  doc.options << '--protected' << '--no-private'
-  doc.options << '-r' << 'README.md'
-  doc.options << '-o' << 'doc'
-  doc.options << '--title' << 'email_validation Documentation'
+YARD::Rake::YardocTask.new("doc") do |doc|
+  doc.options << "-m" << "markdown"
+  doc.options << "-M" << "redcarpet"
+  doc.options << "--protected" << "--no-private"
+  doc.options << "-r" << "README.md"
+  doc.options << "-o" << "doc"
+  doc.options << "--title" << "email_validation Documentation"
 
   doc.files = %w[lib/**/* README.md]
 end
 
-require 'rspec/core/rake_task'
+require "rspec/core/rake_task"
 RSpec::Core::RakeTask.new
 
 task(default: :spec)

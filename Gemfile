@@ -1,10 +1,12 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'localized_each_validator', '>= 1.0.1'
+source "https://rubygems.org"
+
+gem "localized_each_validator", ">= 1.0.1"
 
 group :development do
-  gem 'juwelier'
-  gem 'redcarpet', require: nil
-  gem 'rspec'
-  gem 'yard'
+  gem "juwelier"
+  gem "redcarpet", require: nil
+  gem "rspec"
+  gem "yard"
 end
