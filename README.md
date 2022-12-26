@@ -21,7 +21,7 @@ Installation
 Add the gem to your project's `Gemfile`:
 
 ```` ruby
-gem 'email_validation'
+gem "email_validation"
 ````
 
 Usage
@@ -33,7 +33,7 @@ This gem is an `EachValidator`, and thus is used with the `validates` method:
 class User < ActiveRecord::Base
   validates :email_address,
             presence: true,
-			email: true
+            email:    true
 end
 ````
 
