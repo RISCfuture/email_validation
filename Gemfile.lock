@@ -38,7 +38,7 @@ GEM
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
-    git (1.12.0)
+    git (1.13.0)
       addressable (~> 2.8)
       rchardet (~> 1.8)
     github_api (0.19.0)
@@ -63,18 +63,18 @@ GEM
       rake
       rdoc
       semver2
-    jwt (2.5.0)
+    jwt (2.6.0)
     kamelcase (0.0.2)
       semver2 (~> 3)
     localized_each_validator (1.0.3)
       activemodel (>= 3.0)
       activesupport (>= 3.0)
-    mini_portile2 (2.8.0)
+    mini_portile2 (2.8.1)
     minitest (5.16.3)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.2.3)
-    nokogiri (1.13.8)
+    nokogiri (1.13.10)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     oauth2 (1.4.11)
@@ -83,32 +83,32 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 4)
-    psych (4.0.5)
+    psych (5.0.1)
       stringio
-    public_suffix (5.0.0)
-    racc (1.6.0)
-    rack (3.0.0)
+    public_suffix (5.0.1)
+    racc (1.6.2)
+    rack (3.0.3)
     rake (13.0.6)
     rchardet (1.8.0)
-    rdoc (6.4.0)
+    rdoc (6.5.0)
       psych (>= 4.0.0)
     redcarpet (3.5.1)
-    rspec (3.11.0)
-      rspec-core (~> 3.11.0)
-      rspec-expectations (~> 3.11.0)
-      rspec-mocks (~> 3.11.0)
-    rspec-core (3.11.0)
-      rspec-support (~> 3.11.0)
-    rspec-expectations (3.11.1)
+    rspec (3.12.0)
+      rspec-core (~> 3.12.0)
+      rspec-expectations (~> 3.12.0)
+      rspec-mocks (~> 3.12.0)
+    rspec-core (3.12.0)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.11.0)
-    rspec-mocks (3.11.1)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.11.0)
-    rspec-support (3.11.1)
+      rspec-support (~> 3.12.0)
+    rspec-support (3.12.0)
     ruby2_keywords (0.0.5)
     semver2 (3.4.2)
-    stringio (3.0.2)
+    stringio (3.0.4)
     thread_safe (0.3.6)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
@@ -117,7 +117,8 @@ GEM
       webrick (~> 1.7.0)
 
 PLATFORMS
-  ruby
+  arm64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   juwelier
@@ -127,4 +128,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   2.3.22
+   2.4.1
