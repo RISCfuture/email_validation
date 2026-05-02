@@ -1,6 +1,10 @@
 email_validation
 ================
 
+[![CI](https://github.com/RISCfuture/email_validation/actions/workflows/ruby.yml/badge.svg)](https://github.com/RISCfuture/email_validation/actions/workflows/ruby.yml)
+[![Gem Version](https://img.shields.io/gem/v/email_validation.svg)](https://rubygems.org/gems/email_validation)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **Simple email validator for Rails 3+**
 
 |             |                                 |
