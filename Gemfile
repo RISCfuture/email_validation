@@ -2,11 +2,13 @@
 
 source "https://rubygems.org"
 
-gem "localized_each_validator", ">= 1.0.1"
+gemspec
+
+group :development, :test do
+  gem "rake", "~> 13.0"
+  gem "rspec", "~> 3.13"
+end
 
 group :development do
-  gem "juwelier"
-  gem "redcarpet", require: nil
-  gem "rspec"
-  gem "yard"
+  gem "standard", require: false
 end
