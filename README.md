@@ -56,9 +56,9 @@ Examples:
 
 ```ruby
 validates :email_address, email: true
-validates :email_address, email: { format: :rfc5322 }
-validates :email_address, email: { allow_blank: true }
-validates :email_address, email: { message: "doesn't look like an email" }
+validates :email_address, email: {format: :rfc5322}
+validates :email_address, email: {allow_blank: true}
+validates :email_address, email: {message: "doesn't look like an email"}
 ```
 
 The validator also accepts the `Name <addr@host>` form, so values like

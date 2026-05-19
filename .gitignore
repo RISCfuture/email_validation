@@ -8,7 +8,6 @@
 /spec/examples.txt
 /tmp/
 *.gem
-Gemfile.lock
 
 ## OS / editor cruft
 .DS_Store
