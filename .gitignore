@@ -1,3 +1,4 @@
+# Ruby gem
 /.bundle/
 /.yardoc/
 /_yardoc/
@@ -8,14 +9,3 @@
 /spec/examples.txt
 /tmp/
 *.gem
-
-## OS / editor cruft
-.DS_Store
-*.tmproj
-tmtags
-*~
-\#*
-.\#*
-*.swp
-.idea/
-.claude/
