@@ -8,3 +8,8 @@ group :development, :test do
   gem "rake", "~> 13.0"
   gem "rspec", "~> 3.13"
 end
+
+group :development do
+  gem "redcarpet", require: false
+  gem "yard", require: false
+end
